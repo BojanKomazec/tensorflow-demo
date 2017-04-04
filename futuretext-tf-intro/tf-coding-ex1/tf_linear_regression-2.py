@@ -38,6 +38,12 @@ def main():
     train_y = numpy.asarray([t[1] for t in training_set_list])
     n_samples = train_x.shape[0]
 
+    plt.plot(train_x, train_y, 'bo', label='Blood pressure examples (Training data)')
+    plt.xlabel('sys (systolic)')
+    plt.ylabel('dys (diastolic)')
+    plt.legend()
+    plt.show()
+
     # Create placeholder for providing inputs
     X = tf.placeholder("float")
     Y = tf.placeholder("float")
