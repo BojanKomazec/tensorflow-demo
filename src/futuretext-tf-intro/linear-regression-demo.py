@@ -21,7 +21,7 @@ train = optimizer.minimize(loss)
 x_train = [1, 2, 3, 4]
 y_train = [0, -1, -2, -3]
 
-# Training loop 
+# Training loop
 init = tf.global_variables_initializer()
 sess = tf.Session()
 sess.run(init) # reset values to wrong
@@ -32,4 +32,3 @@ for i in range(1000):
 # Evaluate training accuracy
 curr_W, curr_b, curr_loss = sess.run([W, b, loss], {x : x_train, y : y_train })
 print("W: %s b: %s loss: %s"%(curr_W, curr_b, curr_loss))
-
