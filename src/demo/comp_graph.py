@@ -7,5 +7,4 @@ def computationalGraphDemo():
     print(node1, node2)
 
     # Runnig computational graph
-    sess = tf.Session()
-    print(sess.run([node1, node2]))
+    print([node1, node2])
