@@ -67,3 +67,65 @@ W tensorflow/core/platform/cpu_feature_guard.cc:45] The TensorFlow library wasn'
 W tensorflow/core/platform/cpu_feature_guard.cc:45] The TensorFlow library wasn't compiled to use AVX instructions, but these are available on your machine and could speed up CPU computations.
 b'Hello, TensorFlow!'
 ```
+
+# Installing Dependencies
+
+## Tensorflow
+
+```
+import tensorflow as tf
+```
+requires having Tensorflow installed.
+
+Many of the examples are written for TF version 1. To make them working on the box/venv with TF version 2 installed we need to do the following;
+
+Replace
+```
+import tensorflow as tf
+```
+with:
+```
+import tensorflow.compat.v1 as tf
+```
+and execute:
+```
+tf.disable_v2_behavior()
+```
+
+## Tensorflow Object Detection API
+
+```
+from utils import ...
+```
+requires having `<PATH_TO_TF>/TensorFlow/models/research/object_detection` added to Python module search path (among `research` and `research/slim`):
+```
+export PYTHONPATH=$PYTHONPATH:<PATH_TO_TF>/tensorflow/models/research:<PATH_TO_TF>/tensorflow/models/research/slim:<PATH_TO_TF>/TensorFlow/models/research/object_detection
+```
+If it is not added, we need to use:
+```
+from object_detection.utils import ...
+```
+
+https://github.com/tensorflow/models/blob/master/research/object_detection/g3doc/installation.md
+https://github.com/tensorflow/models/blob/master/research/delf/INSTALL_INSTRUCTIONS.md
+https://tensorflow-object-detection-api-tutorial.readthedocs.io/en/latest/install.html
+
+
+## OpenCV
+
+```
+import cv2
+```
+requires having OpenCV installed:
+```
+$ sudo apt install python3-opencv
+...
+Setting up python3-numpy (1:1.13.3-2ubuntu1)
+...
+Setting up python3-opencv (3.2.0+dfsg-4ubuntu0.1)
+...
+```
+If OpenCV is not installed the following error is issued:
+```
+unresolved import 'cv2'
+```
