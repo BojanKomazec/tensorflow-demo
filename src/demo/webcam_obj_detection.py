@@ -1,3 +1,5 @@
+# Code is based on the example "Detect Objects Using Your Webcam" by Lyudmil Vladimirov 
+# [https://tensorflow-object-detection-api-tutorial.readthedocs.io/en/latest/camera.html]
 import cv2
 import numpy as np
 import object_detection
