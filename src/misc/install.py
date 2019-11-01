@@ -1,5 +1,6 @@
-from packaging import version
 import tensorflow as tf
+
+from packaging import version
 
 def testTensorFlowInstallation():
    hello = tf.constant('Hello, TensorFlow!')
@@ -11,7 +12,7 @@ def testTensorFlowInstallation():
       print('TensorFlow was built without CUDA (GPU) support.')
 
    if version.parse(tf.__version__) >= version.parse("2.0.0"):
-      print('tf.Session() not supported')
+      print('INFO: tf.Session() not supported')
       print(hello)
    else:
       sess = tf.Session()

@@ -92,6 +92,11 @@ and execute:
 tf.disable_v2_behavior()
 ```
 
+```
+$ pip3 install tensorflow
+```
+
+
 ## Tensorflow Object Detection API
 
 ```
@@ -129,3 +134,35 @@ If OpenCV is not installed the following error is issued:
 ```
 unresolved import 'cv2'
 ```
+
+## Other Packages
+
+```
+$ pip3 install opencv-python
+$ pip3 install packaging
+$ sudo apt install python3-opencv
+$ sudo apt-get install protobuf-compiler python-pil python-lxml python-tk
+$ pip install --user Cython
+$ pip install --user contextlib2
+$ pip install --user jupyter
+$ pip install --user matplotlib
+$ git clone https://github.com/tensorflow/models.git
+```
+
+To avoid installing pacakges one by one a requirements.txt is provided.
+It has been generated via:
+```
+$ pip3 install -r requirements.txt
+```
+Upon entering virtual environment:
+```
+$ source ./venv/bin/activate
+```
+to install all requirements execute:
+```
+pip3 install -r requirements.txt
+```
+
+### References
+
+[Streaming Object Detection Video - Tensorflow Object Detection API Tutorial](https://pythonprogramming.net/video-tensorflow-object-detection-api-tutorial/)

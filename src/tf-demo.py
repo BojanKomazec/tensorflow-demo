@@ -1,13 +1,17 @@
-from demo.install import testTensorFlowInstallation
-from demo.comp_graph import computationalGraphDemo
-from demo.keras import mnistDemo
-from demo.webcam_obj_detection import webcamObjectDetectionDemo
+from keras.diabetes import diabetesDemo
+from keras.mnist import mnistDemo
+from keras.sequential import sequentialNNDemo
+from misc.install import testTensorFlowInstallation
+from misc.comp_graph import computationalGraphDemo
+from opencv.webcam_obj_detection import webcamObjectDetectionDemo
 
 def main():
-	# testTensorFlowInstallation()
 	# computationalGraphDemo()
+	# diabetesDemo()
 	# mnistDemo()
-	webcamObjectDetectionDemo()
+	sequentialNNDemo()
+	# testTensorFlowInstallation()
+	# webcamObjectDetectionDemo()
 
 if __name__ == "__main__":
 	main()
