@@ -9,9 +9,9 @@ def main():
 	# computationalGraphDemo()
 	# diabetesDemo()
 	# mnistDemo()
-	sequentialNNDemo()
+	# sequentialNNDemo()
 	# testTensorFlowInstallation()
-	# webcamObjectDetectionDemo()
+	webcamObjectDetectionDemo()
 
 if __name__ == "__main__":
 	main()
