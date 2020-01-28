@@ -130,7 +130,7 @@ Setting up python3-numpy (1:1.13.3-2ubuntu1)
 Setting up python3-opencv (3.2.0+dfsg-4ubuntu0.1)
 ...
 ```
-If OpenCV is not installed the following error is issued:
+If OpenCV is not installed or its path is not available in the virtual environment, the following error is issued:
 ```
 unresolved import 'cv2'
 ```

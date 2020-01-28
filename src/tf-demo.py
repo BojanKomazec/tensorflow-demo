@@ -8,10 +8,10 @@ from opencv.webcam_obj_detection import webcamObjectDetectionDemo
 def main():
 	# computationalGraphDemo()
 	# diabetesDemo()
-	# mnistDemo()
+	mnistDemo()
 	# sequentialNNDemo()
 	# testTensorFlowInstallation()
-	webcamObjectDetectionDemo()
+	# webcamObjectDetectionDemo()
 
 if __name__ == "__main__":
 	main()
